@@ -2,7 +2,7 @@
 
 mkdir -p dist
 
-for FILE in *.svg; do
+for FILE in logo-full.svg logo-round.svg; do
 	FILENAME=$(basename "$FILE" .svg)
 
 	inkscape --export-plain-svg="dist/$FILE" "$FILE"
@@ -17,3 +17,10 @@ for FILE in *.svg; do
 	inkscape --export-png="dist/$FILENAME-white-128.png" --export-height=128 "dist/$FILENAME-white.svg"
 
 done
+
+# Colored logo & icon
+FILE=logo-round-colored.svg
+FILENAME=$(basename "$FILE" .svg)
+inkscape --export-plain-svg="dist/$FILE" "$FILE"
+inkscape --export-png="dist/$FILENAME-256.png" --export-height=256 "$FILE"
+convert "dist/$FILENAME-256.png" -background transparent -define icon:auto-resize=16,32,48,64,128,256 dist/favicon.ico

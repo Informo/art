@@ -8,6 +8,7 @@ This repository contains all logo and arts created for Informo.
 Just run `./build.sh`
 
 ## Requirements
+- Imagemagick
 - Inkscape
 - _Roboto_ font
 - _Nimbus Roman_ font
