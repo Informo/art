@@ -1,1 +1,1 @@
-Official logos for community members
+Official logos for Informo project members
