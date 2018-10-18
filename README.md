@@ -10,5 +10,6 @@ Just run `./build.sh`
 ## Requirements
 - Imagemagick
 - Inkscape
-- _Roboto_ font
-- _Nimbus Roman_ font
+- Install fonts in the `fonts` folder:
+	- [_Roboto_ font](https://github.com/google/roboto)
+	- [_Nimbus Roman_ font](http://git.ghostscript.com/?p=user/tor/urw-base-12.git;a=tree)
