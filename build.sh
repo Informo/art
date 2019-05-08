@@ -22,6 +22,7 @@ done
 FILE=logo-round-colored.svg
 FILENAME=$(basename "$FILE" .svg)
 inkscape --export-plain-svg="dist/$FILE" "$FILE"
+inkscape --export-png="dist/$FILENAME.png" --export-dpi=700 "$FILE"
 inkscape --export-png="dist/$FILENAME-icon-32.png" --export-height=32 "$FILE"
 inkscape --export-png="dist/$FILENAME-256.png" --export-height=256 "$FILE"
 convert "dist/$FILENAME-256.png" -background transparent -define icon:auto-resize=16,32,48,64,128,256 dist/favicon.ico
