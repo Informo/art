@@ -9,13 +9,14 @@ for FILE in logo-full.svg logo-round.svg; do
 	inkscape --export-png="dist/$FILENAME.png" --export-dpi=700 "$FILE"
 	inkscape --export-png="dist/$FILENAME-128.png" --export-height=128 "$FILE"
 
-	inkscape --export-plain-svg=dist/$FILENAME-white.svg "$FILE"
+	inkscape --export-text-to-path --export-plain-svg=dist/$FILENAME-white.svg "$FILE"
 	sed -i 's/stroke:\s*#000000/stroke:#ffffff/g' "dist/$FILENAME-white.svg"
 	sed -i 's/fill:\s*#000000/fill:#ffffff/g' "dist/$FILENAME-white.svg"
 
 	inkscape --export-png="dist/$FILENAME-white.png" --export-dpi=700 "dist/$FILENAME-white.svg"
 	inkscape --export-png="dist/$FILENAME-white-128.png" --export-height=128 "dist/$FILENAME-white.svg"
 
+	inkscape --export-text-to-path --export-plain-svg=dist/$FILENAME-paths.svg "$FILE"
 done
 
 # Colored logo & icon
